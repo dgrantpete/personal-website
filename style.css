@@ -1,0 +1,19 @@
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>ul>li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+nav>ul>li>a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2em;
+}
+
