@@ -17,3 +17,6 @@ nav>ul>li>a {
     padding: 2em;
 }
 
+nav>ul>li>a:not(.logo-container>a) {
+    background-color: #bcbcbc;
+}
