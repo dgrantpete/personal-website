@@ -160,3 +160,45 @@ main {
         margin-top: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 1rem;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-end;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero>h1 {
+        font-size: 2rem;
+    }
+
+    .hero>h2 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .about {
+        margin: 0;
+        padding: 2rem;
+        border-radius: 0;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .about>img {
+        max-width: 200px;
+    }
+}
