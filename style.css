@@ -173,7 +173,7 @@ main {
     }
 
     .hero {
-        padding: 4rem 0;
+        padding: 4rem 2rem;
     }
 
     .hero>h1 {
@@ -199,6 +199,6 @@ main {
     }
 
     .about>img {
-        max-width: 200px;
+        max-width: 50%;
     }
 }
