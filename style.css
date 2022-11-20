@@ -13,13 +13,20 @@
 
     --heading-font: "Trispace", sans-serif;
     --paragraph-font: 'Open Sans', Helvetica, sans-serif;
+    
+    --max-content-width: 1200px;
+
+    --box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--paragraph-font);
     margin: 0;
+    min-height: 100vh;
 }
 
 /* Start of Header */
@@ -27,7 +34,7 @@ body {
 header {
     padding: 0 5rem;
     background-color: var(--secondary-color);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     z-index: 1;
 }
 
@@ -36,7 +43,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: var(--max-content-width);
 }
 
 .nav-logo {
@@ -80,7 +87,8 @@ nav>ul>li>a.active {
 main {
     padding: 0 5rem;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: var(--max-content-width);
+    flex-grow: 1;
 }
 
 /* Start of Hero */
@@ -116,7 +124,7 @@ main {
     background-color: var(--secondary-color);
     padding: 3rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     margin: 5rem 0;
 }
 
@@ -148,6 +156,49 @@ main {
     font-size: 2rem;
     font-family: var(--heading-font);
 }
+
+/* Start of Footer */
+
+footer {
+    padding: 2rem 5rem;
+    margin: 10rem 0 0 0;
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: var(--max-content-width);
+}
+
+.page-links {
+    text-align: right;
+}
+
+.page-links>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.page-links>figcaption {
+    font-size: 1.2rem;
+    font-family: var(--heading-font);
+    margin: 0;
+    font-weight: bold;
+}
+
+.page-links>ul>li>a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
 
 /* Start of Media Queries */
 
