@@ -161,7 +161,7 @@ main {
 
 footer {
     padding: 2rem 5rem;
-    margin: 10rem 0 0 0;
+    margin: 0;
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
 }
@@ -175,6 +175,7 @@ footer {
 
 .page-links {
     text-align: right;
+    margin: 0;
 }
 
 .page-links>ul {
@@ -199,6 +200,19 @@ footer {
     font-weight: bold;
 }
 
+address {
+    font-style: normal;
+}
+
+address>h3 {
+    margin-top: 0;
+}
+
+address>a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+}
 
 /* Start of Media Queries */
 
