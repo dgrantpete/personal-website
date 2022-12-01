@@ -15,6 +15,7 @@
     --paragraph-font: 'Open Sans', Helvetica, sans-serif;
     
     --max-content-width: 1200px;
+    --sides-padding: 3rem;
 
     --box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
 }
@@ -32,7 +33,6 @@ body {
 /* Start of Header */
 
 header {
-    padding: 0 5rem;
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
     z-index: 1;
@@ -43,6 +43,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 var(--sides-padding);
     max-width: var(--max-content-width);
 }
 
@@ -85,8 +87,10 @@ nav>ul>li>a.active {
 /* Start of Main */
 
 main {
-    padding: 0 5rem;
+    padding: 0 var(--sides-padding);
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
     max-width: var(--max-content-width);
     flex-grow: 1;
 }
@@ -98,7 +102,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0;
+    padding: var(--sides-padding) 0;
     gap: 2rem;
     text-align: center;
 }
@@ -157,10 +161,38 @@ main {
     font-family: var(--heading-font);
 }
 
+/* Start of Slideshow */
+
+.slideshow-container {
+    display: flex;
+    max-width: 100%;
+}
+
+.slideshow-container img {
+    display: none;
+    min-width: 0;
+    flex: 1;
+} 
+
+.slideshow-container>.image-active {
+    display: inline;
+}
+
+#backward,
+#forward {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent1-color);
+    user-select: none;
+    cursor: pointer;
+    padding: 2rem;
+    font-size: 4rem;
+}
+
 /* Start of Footer */
 
 footer {
-    padding: 2rem 5rem;
     margin: 0;
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow);
@@ -170,6 +202,8 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1rem var(--sides-padding);
     max-width: var(--max-content-width);
 }
 
@@ -227,8 +261,12 @@ address>a {
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 0 1rem;
+    :root {
+        --sides-padding: 1rem;
+    }
+
+    main {
+        padding: 0;
     }
 
     nav>ul {
@@ -247,10 +285,6 @@ address>a {
 
     .hero>h2 {
         font-size: 1.5rem;
-    }
-
-    main {
-        padding: 0;
     }
 
     .about {
