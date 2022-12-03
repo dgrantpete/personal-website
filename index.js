@@ -32,3 +32,5 @@ document.querySelector("#forward>span").addEventListener("click", () => {
 document.querySelector("#backward>span").addEventListener("click", () => {
     updateSlides(-1);
 });
+
+setInterval(() => { updateSlides(1); }, 5000);
