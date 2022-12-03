@@ -25,10 +25,10 @@ function updateSlides(n) {
 // Call immediatedly to show first slide (so that "image-active" doesn't need to be added to the HTML)
 updateSlides(0);
 
-document.getElementById("forward").addEventListener("click", () => {
+document.querySelector("#forward>span").addEventListener("click", () => {
     updateSlides(1);
 });
 
-document.getElementById("backward").addEventListener("click", () => {
+document.querySelector("#backward>span").addEventListener("click", () => {
     updateSlides(-1);
 });

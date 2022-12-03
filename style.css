@@ -272,8 +272,10 @@ address {
     font-style: normal;
 }
 
-address>h3 {
+address>p:first-of-type {
     margin-top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 address>a {
