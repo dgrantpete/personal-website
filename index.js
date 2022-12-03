@@ -1,7 +1,9 @@
 var slideNum = 1;
 
 function updateSlides(n) {
-    let slides = document.querySelectorAll(".slideshow-container>img");
+    /* Could have the below variable in global scope for marginally better performance,
+    but by keeping it here images can be added or removed without requiring a page refresh. */
+    let slides = document.querySelectorAll(".slideshow-container img");
 
     slideNum += n;
 
@@ -20,12 +22,13 @@ function updateSlides(n) {
     }
 }
 
+// Call immediatedly to show first slide (so that "image-active" doesn't need to be added to the HTML)
 updateSlides(0);
 
-document.getElementById("forward").addEventListener("click", function() {
+document.getElementById("forward").addEventListener("click", () => {
     updateSlides(1);
 });
 
-document.getElementById("backward").addEventListener("click", function() {
+document.getElementById("backward").addEventListener("click", () => {
     updateSlides(-1);
 });
