@@ -339,14 +339,16 @@ address>a {
     padding: 0;
 }
 
-.qualifications>ul {
+.qualifications-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: 1.2rem;
+    margin: 2rem 0;
 }
 
-.qualifications>ul>li {
+.qualifications-list>span,
+.qualifications-list>div {
     background-color: var(--secondary-color);
     padding: 1rem;
     border-radius: var(--responsive-border-radius);
@@ -359,13 +361,12 @@ address>a {
     flex-wrap: wrap;
 }
 
-.languages>li:first-of-type {
-    margin: auto 0;
-}
-
-.languages>li+li {
-    margin: auto 0;
-    background-color: var(--accent1-color);
+.languages>h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    width: 100%;
 }
 
 /* Start of Media Queries */
