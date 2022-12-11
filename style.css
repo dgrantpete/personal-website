@@ -359,6 +359,8 @@ address>a {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .languages>h5 {
@@ -367,6 +369,17 @@ address>a {
     text-align: center;
     margin: 0;
     width: 100%;
+}
+
+.languages>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.languages>ul>li:first-of-type {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* Start of Media Queries */
