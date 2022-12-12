@@ -107,19 +107,23 @@ main {
     justify-content: center;
     align-items: center;
     padding: var(--sides-padding) 0;
-    gap: 2rem;
+    background-color: #333;
+    gap: 1rem;
     text-align: center;
+    box-shadow: inset var(--box-shadow);
+    border-radius: var(--responsive-border-radius);
+    margin: 5rem 0;
+    border: 3px solid var(--secondary-color);
+    font-family: monospace;
 }
 
 .hero>h1 {
     font-size: 3rem;
-    font-family: var(--paragraph-font);
     margin: 0;
 }
 
 .hero>h2 {
     font-size: 2rem;
-    font-family: var(--heading-font);
     color: var(--text-color-muted);
     margin: 0;
 }
