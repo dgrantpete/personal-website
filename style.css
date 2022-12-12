@@ -405,6 +405,7 @@ address>a {
     opacity: 0;
     border-radius: var(--responsive-border-radius);
     transition: visibility var(--transition-timing), opacity var(--transition-timing);
+    box-shadow: var(--box-shadow);
 }
 
 .languages>figure:hover>figcaption {
@@ -467,6 +468,11 @@ address>a {
 
     .about>img {
         max-width: 50%;
+    }
+
+    .qualifications>h1, 
+    .projects>h1 {
+        font-size: 2.5rem;
     }
 
     .slideshow-container img {
