@@ -357,7 +357,7 @@ address>a {
 
 .languages {
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -371,15 +371,45 @@ address>a {
     width: 100%;
 }
 
-.languages>ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.languages>figure {
+    position: relative;
+    user-select: none;
 }
 
-.languages>ul>li:first-of-type {
+.languages>figure>figcaption {
     font-weight: bold;
     font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    border-radius: var(--responsive-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: background-color var(--transition-timing);
+}
+
+.languages>figure>ul {
+    visibility: hidden;
+    position: absolute;
+    font-size: 1.2rem;
+    width: fit-content;
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+    opacity: 0;
+    border-radius: var(--responsive-border-radius);
+    transition: visibility var(--transition-timing), opacity var(--transition-timing);
+}
+
+.languages>figure:hover>figcaption {
+    background-color: var(--accent2-color);
+}
+
+.languages>figure:hover>ul {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Start of Media Queries */
