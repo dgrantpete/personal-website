@@ -359,7 +359,7 @@ address>a {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
