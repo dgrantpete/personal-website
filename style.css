@@ -324,22 +324,6 @@ address>a {
     color: var(--text-color);
 }
 
-.image-gallery {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    background-color: var(--secondary-color);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--responsive-border-radius);
-    padding: 5rem;
-    box-sizing: border-box;
-}
-
-.image-gallery>img {
-    min-width: 0;
-    width: 100%;
-}
-
 .qualifications ul {
     list-style: none;
     padding: 0;
